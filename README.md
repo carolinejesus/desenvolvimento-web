@@ -9,9 +9,19 @@
      do livro "Lógica de Programação e algoritmos com JavaScript", por exemplo, os alunos precisam rotacionar de uma 
      forma dinâmica a forma como pegam esse livro emprestado, tendo a possibilidade de ficarem com ele 
      durante um dia.
-     
+     O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
+     fazendo com que sempre haja disponibilidade de material no acervo para os alunos que necessitem dele. Fazendo com 
+     que a rotabilidade dos empréstimos seja mais fluida e organizada e todos os alunos consigam utilizar o material.
+     O sistema estará dentro da "Minha biblioteca" institucional, então o aluno precisa estar regularmente matriculado 
+     para ter acesso ao sistema e as telas de empréstimos e reservas, não precisando haver qualquer tipo de verificação 
+     para confirmar que o aluno possui ou não matricula.
       -->
-O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
+Em uma realidade alternativa, alunos precisam diariamente de livros para que possam acompanhar suas
+     aulas. Como em uma turma de Desenvolvimento WEB existem 42 alunos e apenas 13 exemplares emprestáveis 
+     do livro "Lógica de Programação e algoritmos com JavaScript", por exemplo, os alunos precisam rotacionar de uma 
+     forma dinâmica a forma como pegam esse livro emprestado, tendo a possibilidade de ficarem com ele 
+     durante um dia.
+     O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
      fazendo com que sempre haja disponibilidade de material no acervo para os alunos que necessitem dele. Fazendo com 
      que a rotabilidade dos empréstimos seja mais fluida e organizada e todos os alunos consigam utilizar o material.
      O sistema estará dentro da "Minha biblioteca" institucional, então o aluno precisa estar regularmente matriculado 
@@ -23,8 +33,8 @@ O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a rese
      EXEMPLO:
      Usuários principais: Alunos regulamente matriculados, bibliotecários
      Decisores/Apoiadores: Bibliotecários -->
-Usuários principais: [lista]
-Decisores/Apoiadores: [lista]
+Usuários principais: Alunos regulamente matriculados, bibliotecários
+Decisores/Apoiadores: Bibliotecários
 
 ## 3) Casos de uso (de forma simples)
 <!-- Formato "Ator: ações que pode fazer".
@@ -38,9 +48,11 @@ Decisores/Apoiadores: [lista]
      Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acervo, verificar a fila de espera, emprestam os materiais disponíveis, atualizam a fila e o status do material. 
 
       -->
-Todos: [ações comuns, ex.: Logar/deslogar; Manter dados cadastrais]  
-[Ator 1]: [ações do ator 1]  
-[Ator 2]: [ações do ator 2] 
+Aluno: Pode pesquisar livros e verificar quantos exemplares estão se disponíveis se o livro existir no acervo.
+Ele pode também fazer a reserva de um único exemplar, caso não esteja disponível e vai ficar em uma fila de espera
+para quando o material estiver disponível. Ele também pode emprestar um livro, deixando ele no seu nome para que 
+faça a retirada do material na biblioteca.
+Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acervo, verificar a fila de espera, emprestam os materiais disponíveis, atualizam a fila e o status do material.
 
 ## 4) Limites e suposições
 <!-- Simples assim:
@@ -53,9 +65,10 @@ Todos: [ações comuns, ex.: Logar/deslogar; Manter dados cadastrais]
      esperada. Ele, no entando, pode reservar o livro e entrar na fila de espera para poder pegar outro exemplar. Caso vença a 
      data de devolução do material, o aluno ficará impossibilidade de fazer uma nova reserva ou empréstimo durante 24hrs.
      -->
-Limites: [prazo final], [regras/tecnologias obrigatórias], [restrições]  
-Suposições: [internet/navegador/GitHub/tempo de teste]  
-Plano B: [como continua entregando a 1ª fatia se algo falhar]
+O aluno pode pedir emprestado apenas um exemplar de cada material, podendo ficar com ele durante 24hrs. Ele pode
+fazer a devolução a qualquer momento, porém ele não pode renovar o livro no mesmo dia, para que possa haver a rotatividade
+esperada. Ele, no entando, pode reservar o livro e entrar na fila de espera para poder pegar outro exemplar. Caso vença a 
+data de devolução do material, o aluno ficará impossibilidade de fazer uma nova reserva ou empréstimo durante 24hrs.
 
 ## 5) Hipóteses + validação
 <!-- Preencha as duas frases abaixo. Simples e direto.
