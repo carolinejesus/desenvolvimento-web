@@ -9,16 +9,14 @@
      do livro "Lógica de Programação e algoritmos com JavaScript", por exemplo, os alunos precisam rotacionar de uma 
      forma dinâmica a forma como pegam esse livro emprestado, tendo a possibilidade de ficarem com ele 
      durante um dia.
-     O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
+     
+      -->
+O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
      fazendo com que sempre haja disponibilidade de material no acervo para os alunos que necessitem dele. Fazendo com 
      que a rotabilidade dos empréstimos seja mais fluida e organizada e todos os alunos consigam utilizar o material.
      O sistema estará dentro da "Minha biblioteca" institucional, então o aluno precisa estar regularmente matriculado 
      para ter acesso ao sistema e as telas de empréstimos e reservas, não precisando haver qualquer tipo de verificação 
      para confirmar que o aluno possui ou não matricula.
-      -->
-[Quem], em [contexto], tem dificuldade em [tarefa/dor].
-Isso causa [efeito mensurável].
-No início, o foco será [público principal] com o objetivo de [resultado simples].
 
 ## 2) Atores e Decisores (quem usa / quem decide)
 <!-- Liste papéis (não nomes).
