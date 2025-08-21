@@ -16,25 +16,25 @@
      para ter acesso ao sistema e as telas de empréstimos e reservas, não precisando haver qualquer tipo de verificação 
      para confirmar que o aluno possui ou não matricula.
       -->
-Em uma realidade alternativa, alunos precisam diariamente de livros para que possam acompanhar suas
-     aulas. Como em uma turma de Desenvolvimento WEB existem 42 alunos e apenas 13 exemplares emprestáveis 
-     do livro "Lógica de Programação e algoritmos com JavaScript", por exemplo, os alunos precisam rotacionar de uma 
-     forma dinâmica a forma como pegam esse livro emprestado, tendo a possibilidade de ficarem com ele 
-     durante um dia.
-     O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
-     fazendo com que sempre haja disponibilidade de material no acervo para os alunos que necessitem dele. Fazendo com 
-     que a rotabilidade dos empréstimos seja mais fluida e organizada e todos os alunos consigam utilizar o material.
-     O sistema estará dentro da "Minha biblioteca" institucional, então o aluno precisa estar regularmente matriculado 
-     para ter acesso ao sistema e as telas de empréstimos e reservas, não precisando haver qualquer tipo de verificação 
-     para confirmar que o aluno possui ou não matricula.
+[Em uma realidade alternativa, alunos precisam diariamente de livros para que possam acompanhar suas
+aulas. Como em uma turma de Desenvolvimento WEB existem 42 alunos e apenas 13 exemplares emprestáveis 
+do livro "Lógica de Programação e algoritmos com JavaScript", por exemplo, os alunos precisam rotacionar de uma 
+forma dinâmica a forma como pegam esse livro emprestado, tendo a possibilidade de ficarem com ele 
+durante um dia.
+O objetivo é criar um Sistema de Biblioteca Online, onde será permitida a reserva desses livros por alunos,
+fazendo com que sempre haja disponibilidade de material no acervo para os alunos que necessitem dele. Fazendo com 
+que a rotabilidade dos empréstimos seja mais fluida e organizada e todos os alunos consigam utilizar o material.
+O sistema estará dentro da "Minha biblioteca" institucional, então o aluno precisa estar regularmente matriculado 
+para ter acesso ao sistema e as telas de empréstimos e reservas, não precisando haver qualquer tipo de verificação 
+para confirmar que o aluno possui ou não matricula.]
 
 ## 2) Atores e Decisores (quem usa / quem decide)
 <!-- Liste papéis (não nomes).
      EXEMPLO:
      Usuários principais: Alunos regulamente matriculados, bibliotecários
      Decisores/Apoiadores: Bibliotecários -->
-Usuários principais: Alunos regulamente matriculados, bibliotecários
-Decisores/Apoiadores: Bibliotecários
+[Usuários principais: Alunos regulamente matriculados, bibliotecários
+Decisores/Apoiadores: Bibliotecários]
 
 ## 3) Casos de uso (de forma simples)
 <!-- Formato "Ator: ações que pode fazer".
@@ -48,11 +48,11 @@ Decisores/Apoiadores: Bibliotecários
      Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acervo, verificar a fila de espera, emprestam os materiais disponíveis, atualizam a fila e o status do material. 
 
       -->
-Aluno: Pode pesquisar livros e verificar quantos exemplares estão se disponíveis se o livro existir no acervo.
+[Aluno: Pode pesquisar livros e verificar quantos exemplares estão se disponíveis se o livro existir no acervo.
 Ele pode também fazer a reserva de um único exemplar, caso não esteja disponível e vai ficar em uma fila de espera
 para quando o material estiver disponível. Ele também pode emprestar um livro, deixando ele no seu nome para que 
 faça a retirada do material na biblioteca.
-Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acervo, verificar a fila de espera, emprestam os materiais disponíveis, atualizam a fila e o status do material.
+Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acervo, verificar a fila de espera, emprestam os materiais disponíveis, atualizam a fila e o status do material.]
 
 ## 4) Limites e suposições
 <!-- Simples assim:
@@ -65,10 +65,10 @@ Bibliotecários: Podem atulizar a quantidade de exemplares disponíveis no acerv
      esperada. Ele, no entando, pode reservar o livro e entrar na fila de espera para poder pegar outro exemplar. Caso vença a 
      data de devolução do material, o aluno ficará impossibilidade de fazer uma nova reserva ou empréstimo durante 24hrs.
      -->
-O aluno pode pedir emprestado apenas um exemplar de cada material, podendo ficar com ele durante 24hrs. Ele pode
+[O aluno pode pedir emprestado apenas um exemplar de cada material, podendo ficar com ele durante 24hrs. Ele pode
 fazer a devolução a qualquer momento, porém ele não pode renovar o livro no mesmo dia, para que possa haver a rotatividade
 esperada. Ele, no entando, pode reservar o livro e entrar na fila de espera para poder pegar outro exemplar. Caso vença a 
-data de devolução do material, o aluno ficará impossibilidade de fazer uma nova reserva ou empréstimo durante 24hrs.
+data de devolução do material, o aluno ficará impossibilidade de fazer uma nova reserva ou empréstimo durante 24hrs.]
 
 ## 5) Hipóteses + validação
 <!-- Preencha as duas frases abaixo. Simples e direto.
@@ -94,18 +94,11 @@ Validação (viabilidade): [medição no protótipo]; meta: [n] s ou menos na ma
      6) Faz a entrega para o aluno do material;
      7) Depois de fazer o uso necessário, o aluno devolve o material;
      8) Bibliotecário atualiza o status do material devolvido ou o atribui para o próximo da fila.
-
-     EXEMPLO de Fluxo:
-     1) Aluno faz login
-     2) Clica em "Pedir ajuda" e descreve a dúvida
-     3) Sistema salva e coloca na fila
-     4) Lista mostra ordem e tempo desde criação
-     5) Professor encerra o chamado
-     EXEMPLO de 1ª fatia:
-     Inclui login simples, criar chamado, listar em ordem.
-     Critérios de aceite (objetivos): criar → aparece na lista com horário; encerrar → some ou marca "fechado". -->
+ -->
 **Fluxo principal (curto):**  
-1) [entrada do usuário] → 2) [processo] → 3) [salvar algo] → 4) [mostrar resultado]
+1) [Aluno faz uma pesquisa de um material] → 2) [Checa quantos materias estão disponíveis] → 3) [Se tiver disponibilidade -> faz reserva pra retirar na biblioteca] → 4) [Se não tiver mais exemplares -> faz reserva e entra na fila para retirada] → 5) [Bibliotecário rece notificação para fazer a liberação
+para fazer a liberação do material] → 6) [Bibliotecário faz a entrega para o aluno do material] → 7) [Depois de fazer o uso necessário, o aluno devolve o
+material] → 8) [Bibliotecário atualiza o status do material devolvido ou o atribui para o próximo da fila]
 
 **Primeira fatia vertical (escopo mínimo):**  
 Inclui: [uma tela], [uma ação principal], [salvar], [mostrar algo]  
